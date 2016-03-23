@@ -4,7 +4,7 @@ title:      "Using the Tictail API in iOS."
 subtitle:   "Part 1 - Authentication"
 date:       2014-03-23 16:20:00
 author:     "Billy"
-header-img: "img/post-bg-07.jpg"
+header-img: "img/post-bg-07.png"
 ---
 ## Developer portal
 
@@ -53,6 +53,8 @@ What we want to do next is to handle that redirect by checking if a code is pres
 
 1. Implement the following method in your appdelegate: `func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool`
 2. Parse the url using NSURLComponents, check if the path is "auth" and grab the value of the query parameter called "code".
+
+```
 	var variables = Dictionary<String, String>()
         if let components = NSURLComponents(URL: url, resolvingAgainstBaseURL: false),
         let query = components.query {
@@ -60,14 +62,14 @@ What we want to do next is to handle that redirect by checking if a code is pres
                 // Get the parameter name
                 let key = qs.componentsSeparatedByString("=")[0]
                 // Get the parameter value
-                var value = qs.componentsSeparatedByString("=")[1]	value = value.stringByReplacingOccurrencesOfString("+", withString: " ")            
-   if let decodedValue = value.stringByRemovingPercentEncoding {
-   variables[key] = decodedValue
-    }
+                var value = qs.componentsSeparatedByString("=")[1]				value = value.stringByReplacingOccurrencesOfString("+", withString: " ")            
+   				if let decodedValue = value.stringByRemovingPercentEncoding {
+   					variables[key] = decodedValue
+    			}
                 
             }
 		}
-		
+```
 ### Trade code for access token
 We're almost there! This is the last step before we'll have a token that we can use to call the API.
 

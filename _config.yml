@@ -1,15 +1,16 @@
 # Site settings
-title: Clean Blog
+title: Billy Ohgren
 header-img: img/home-bg.jpg
-email: your-email@yourdomain.com
+email: hi@billy.nu
 copyright_name: Your/Project/Corporate Name
-description: "Write your site description here. It will be used as your sites meta description as well!"
+description: "My name is Billy, working as an iOS (iPhone/iPad) developer at Bloglovin\'.
+A quote from my Linkedin profile: \"Three words that describe me: happy, curious, social.\"
+When I'm not working I love to travel, hack on small projects or snap some photos :)."
 baseurl: ""
-url: "http://yourdomain.com"
-twitter_username: SBootstrap
-github_username:  davidtmiller
-facebook_username:  IronSummitMedia
-email_username:  your-email@yourdomain.com
+url: "http://www.billy.nu"
+twitter_username: ohgrenbilly
+github_username:  billyohgren
+email_username:  hi@billy.nu
 
 # Build settings
 markdown: kramdown

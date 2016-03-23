@@ -40,12 +40,12 @@ Before we can perform API calls on behalf of a store we need to show the user a 
 2. Either send the user to Safari for login or open the URL in a web view. I'll do the former because it's just one line of code :P
 
 Example:
-	```
+```
 	let authUrl = "https://tictail.com/oauth/authorize?response_type=code&client_id=MY-CLIENT-ID"
 	if let url = NSURL(string: signInUrl) {
 		UIApplication.sharedApplication().openURL(url)
 	}
-	```
+```
 
 When the user hit the login button your redirect URI will get called, which in our case is "tictailtest://auth". 
 
@@ -72,6 +72,7 @@ What we want to do next is to handle that redirect by checking if a code is pres
             }
 		}
 ```
+
 ### Trade code for access token
 
 We're almost there! This is the last step before we'll have a token that we can use to call the API.

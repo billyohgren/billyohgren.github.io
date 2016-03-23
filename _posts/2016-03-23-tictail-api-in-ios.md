@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Using the Tictail API in iOS."
-subtitle:   ""
+subtitle:   "Part 1 - Authentication"
 date:       2014-03-23 16:20:00
 author:     "Billy"
 header-img: "img/post-bg-07.jpg"

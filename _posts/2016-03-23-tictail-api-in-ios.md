@@ -47,7 +47,7 @@ Example:
 	}
 ```
 
-When the user hit the login button your redirect URI will get called, which in our case is "tictailtest://auth". 
+When the user hit the login button your redirect URI will get called, which in our case is "tictailtest://auth".
 
 What we want to do next is to handle that redirect by checking if a code is present in the url, and if so, exchange it with an access token.
 
@@ -68,7 +68,7 @@ What we want to do next is to handle that redirect by checking if a code is pres
    				if let decodedValue = value.stringByRemovingPercentEncoding {
    					variables[key] = decodedValue
     			}
-                
+
             }
 		}
 ```

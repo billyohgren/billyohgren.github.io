@@ -9,6 +9,7 @@ header-img: "img/post-bg-07.png"
 ## Developer portal
 
 #### Create an app
+
 Before you're able to talk to the Tictail API you have to create an app on tictail.com/developers.
 
 1. Start by typing tictail.com/developers in your browser.
@@ -24,6 +25,7 @@ Before you're able to talk to the Tictail API you have to create an app on ticta
 3. Copy-paste both the "Client ID" and "Client Secret" to an empty text file, we're going to use this soon from our iOS app.
 
 ## iOS
+
 ### Add a custom URL scheme
 
 1. Select your project in the left hand pane in Xcode.
@@ -38,12 +40,12 @@ Before we can perform API calls on behalf of a store we need to show the user a 
 2. Either send the user to Safari for login or open the URL in a web view. I'll do the former because it's just one line of code :P
 
 Example:
-	`
+	```
 	let authUrl = "https://tictail.com/oauth/authorize?response_type=code&client_id=MY-CLIENT-ID"
 	if let url = NSURL(string: signInUrl) {
 		UIApplication.sharedApplication().openURL(url)
 	}
-	`
+	```
 
 When the user hit the login button your redirect URI will get called, which in our case is "tictailtest://auth". 
 
@@ -71,6 +73,7 @@ What we want to do next is to handle that redirect by checking if a code is pres
 		}
 ```
 ### Trade code for access token
+
 We're almost there! This is the last step before we'll have a token that we can use to call the API.
 
 1. Create a NSURLRequest with the URL https://tictail.com/oauth/token and the following POST parameters: "client\_id","client\_secret","code" (the code you got in the previous paragraph),"grant\_type" (should always be "authorization_code").

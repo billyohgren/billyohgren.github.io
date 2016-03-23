@@ -1,21 +1,28 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
 
-# Site settings
-title: Billy.nu
-email: hi@billy.nu
-description: > # this means to ignore newlines until "baseurl:"
-  My name is Billy, working as an iOS (iPhone/iPad) developer at Bloglovin'.
-  A quote from my Linkedin profile: "Three words that describe me: happy, curious, social."
-  When I'm not working I love to travel, hack on small projects or snap some photos :).
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.billy.nu" # the base hostname & protocol for your site
-twitter_username: ohgrenbilly
-github_username:  billyohgren
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
 
-# Build settings
-markdown: kramdown
+# Setup
+title:            Billy.nu
+tagline:          'Billy Ohgren'
+description:      'My name is Billy, working as an iOS (iPhone/iPad) developer at Bloglovin\'.
+A quote from my Linkedin profile: "Three words that describe me: happy, curious, social."
+When I'm not working I love to travel, hack on small projects or snap some photos :).'
+url:              http://www.billy.nu
+baseurl:          /
+
+author:
+  name:           'Billy Ohgren'
+  url:            https://twitter.com/ohgrenbilly
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/poole/hyde

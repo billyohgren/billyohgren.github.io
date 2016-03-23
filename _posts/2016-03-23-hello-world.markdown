@@ -2,7 +2,7 @@
 layout:     post
 title:      "Hello world"
 subtitle:   "I'm back!"
-date:       2014-09-24 12:00:00
+date:       2014-03-23 14:42:00
 author:     "Billy"
 header-img: "img/post-bg-06.jpg"
 ---

@@ -40,11 +40,12 @@ Before we can perform API calls on behalf of a store we need to show the user a 
 2. Either send the user to Safari for login or open the URL in a web view. I'll do the former because it's just one line of code :P
 
 Example:
+
 ```
-	let authUrl = "https://tictail.com/oauth/authorize?response_type=code&client_id=MY-CLIENT-ID"
-	if let url = NSURL(string: signInUrl) {
-		UIApplication.sharedApplication().openURL(url)
-	}
+let authUrl = "https://tictail.com/oauth/authorize?response_type=code&client_id=MY-CLIENT-ID"
+if let url = NSURL(string: signInUrl) {
+	UIApplication.sharedApplication().openURL(url)
+}
 ```
 
 When the user hit the login button your redirect URI will get called, which in our case is "tictailtest://auth".
@@ -53,23 +54,26 @@ What we want to do next is to handle that redirect by checking if a code is pres
 
 ### Handle redirect URI
 
-1. Implement the following method in your appdelegate: `func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool`
+1. Implement the following method in your appdelegate:
+```
+func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool
+```
 2. Parse the url using NSURLComponents, check if the path is "auth" and grab the value of the query parameter called "code".
 
 ```
-	var variables = Dictionary<String, String>()
-        if let components = NSURLComponents(URL: url, resolvingAgainstBaseURL: false),
-        let query = components.query {
-            for qs in query.componentsSeparatedByString("&") {
-                // Get the parameter name
-                let key = qs.componentsSeparatedByString("=")[0]
-                // Get the parameter value
-                var value = qs.componentsSeparatedByString("=")[1]				value = value.stringByReplacingOccurrencesOfString("+", withString: " ")            
-   				if let decodedValue = value.stringByRemovingPercentEncoding {
-   					variables[key] = decodedValue
-    			}
-
-            }
+var variables = Dictionary<String, String>()
+	if let components = NSURLComponents(URL: url, resolvingAgainstBaseURL: false),
+    let query = components.query {
+			for qs in query.componentsSeparatedByString("&") {
+	      // Get the parameter name
+	      let key = qs.componentsSeparatedByString("=")[0]
+	      // Get the parameter value
+	      var value = qs.componentsSeparatedByString("=")[1]
+				value = value.stringByReplacingOccurrencesOfString("+", withString: " ")            
+	   		if let decodedValue = value.stringByRemovingPercentEncoding {
+	   			variables[key] = decodedValue
+	    	}
+    	}
 		}
 ```
 

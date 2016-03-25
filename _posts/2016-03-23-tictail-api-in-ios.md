@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Using the Tictail API in iOS."
-subtitle:   "Part 1 - Authentication"
+subtitle:   "Authentication"
 date:       2014-03-23 16:20:00
 author:     "Billy"
 header-img: "img/post-bg-07.png"
@@ -55,9 +55,11 @@ What we want to do next is to handle that redirect by checking if a code is pres
 ### Handle redirect URI
 
 1. Implement the following method in your appdelegate:
+
 ```
 func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool
 ```
+
 2. Parse the url using NSURLComponents, check if the path is "auth" and grab the value of the query parameter called "code".
 
 ```
@@ -83,6 +85,15 @@ We're almost there! This is the last step before we'll have a token that we can 
 
 1. Create a NSURLRequest with the URL https://tictail.com/oauth/token and the following POST parameters: "client\_id","client\_secret","code" (the code you got in the previous paragraph),"grant\_type" (should always be "authorization_code").
 2. Parse the response JSON and look for the keys "access_token" and "expires_in" and store them somewhere safe. (from Tictail.com: *You should treat the access\_token as you would with a password, keep it safe and never share it, it was given to you in trust.*)
+
+### Using the access token
+
+Create a NSURLRequest like you normally would and add the header authorization like this:
+
+```
+let newRequest = NSMutableURLRequest(URL: url)
+newRequest.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+```
 
 ## Done!
 

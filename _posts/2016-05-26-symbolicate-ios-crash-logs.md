@@ -14,8 +14,10 @@ A friend of mine asked me if I knew how to symbolicate crash logs and instead of
 
 ## How?
 
-1. Download this zip archive
+1. Download [this zip archive](https://github.com/billyohgren/billyohgren.github.io/blob/master/files/symbolic8/Symbolic8-alpha.zip)
 2. Unarchive it.
 3. Start the app (make sure that you can open apps that haven't been signed)
-4. Browse your 
+4. Browse and select the path to your: .App, .dSYM and .crash file and hit Symbolicate.
+5. Name your symbolicated crash and click ok.
+6. Good luck with fixing that crash!
 

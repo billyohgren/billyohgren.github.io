@@ -2,7 +2,7 @@
 layout:     post
 title:      "Symbolicate iOS crash logs."
 subtitle:   "Using my app called Symbolic8."
-date:       2016-05-26 12:21:00
+date:       2016-05-26 01:01:00
 author:     "Billy"
 header-img: "img/post-bg-06.jpg"
 ---
@@ -14,7 +14,7 @@ A friend of mine asked me if I knew how to symbolicate crash logs and instead of
 
 ## How?
 
-1. Download [this zip archive](https://github.com/billyohgren/billyohgren.github.io/blob/master/files/symbolic8/Symbolic8-alpha.zip)
+1. Download [this zip archive](https://github.com/billyohgren/billyohgren.github.io/blob/master/files/symbolic8/Symbolic8-alpha.zip?raw=true)
 2. Unarchive it.
 3. Start the app (make sure that you can open apps that haven't been signed)
 4. Browse and select the path to your: .App, .dSYM and .crash file and hit Symbolicate.

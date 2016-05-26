@@ -2,7 +2,7 @@
 layout:     post
 title:      "Symbolicate iOS crash logs."
 subtitle:   "Using my app called Symbolic8."
-date:       2016-05-26 13:20:00
+date:       2016-05-26 12:21:00
 author:     "Billy"
 header-img: ""
 ---

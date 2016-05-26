@@ -7,7 +7,7 @@ author:     "Billy"
 header-img: "img/post-bg-06.jpg"
 ---
 ## What?
-Symbolic8 is an app that makes it super easy to symbolicate iOS crash logs in Mac OSX.
+Symbolic8 is an app that makes it super easy to symbolicate iOS crash logs on Mac OSX.
 
 ## Why?
 A friend of mine asked me if I knew how to symbolicate crash logs and instead of replying with a answer I wrote a simple app :)

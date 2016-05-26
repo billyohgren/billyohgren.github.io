@@ -4,7 +4,7 @@ title:      "Symbolicate iOS crash logs."
 subtitle:   "Using my app called Symbolic8."
 date:       2016-05-26 12:21:00
 author:     "Billy"
-header-img: ""
+header-img: "img/post-bg-06.jpg"
 ---
 ## What?
 Symbolic8 is an app that makes it super easy to symbolicate iOS crash logs in Mac OSX.

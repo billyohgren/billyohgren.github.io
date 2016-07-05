@@ -2,7 +2,7 @@
 layout:     post
 title:      "How to copy VMDK files from USB (vmfs) in ESXI 5.5"
 subtitle:   "What sounds like an easy task"
-date:       2016-07-25 06:20:00
+date:       2016-07-24 06:20:00
 author:     "Billy"
 header-img: ""
 ---

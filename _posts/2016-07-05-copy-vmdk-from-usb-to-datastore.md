@@ -7,7 +7,7 @@ author:     "Billy"
 header-img: ""
 ---
 ## Background
-One day one of my harddrive inside of my HP Microserver G8 decided to give up on my and I lost all of my virtual machines. It could have been worse though, it could have been all of my photos!
+One day one of my hard drives inside of my HP Microserver G8 decided to give up on me and I lost all of my virtual machines. It could have been worse though, it could have been all of my photos!
 I asked myself why why why haven't I used raid? 
 After a quick price watching I bought two 5TB drives (WD Blue with modified parking time to 300 seconds, just like WD Red) and decided to finally do this.
 After removing the old drives, installed the new ones and switch the setting in BIOS for AHCI/RAID to RAID I was going to create a new RAID array.

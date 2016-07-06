@@ -30,3 +30,14 @@ There's no way to access a USB disk directly from ESXi.
 1. The easiest would be to lend/buy an identical server, or maybe any other server running ESXi and AHCI instead of RAID.
 2. Buy a SATA controller card that's supported by ESXi.
 3. Install the open source vmfs driver on a windows machine and upload the files via vSphere.
+
+## UPDATE:
+I was able to scp all of my virtual machines to my ESXi data store and add them to my inventory but when I tried to send one of my 2TB vmdk files scp was just stalling. I tried a bunch of solutions I found on stack overflow without any luck.
+
+After som googling I found this blog post about installing rsync on esxi https://damiendebin.net/blog/2013/12/06/esxi-5-dot-1-and-rsync/. I wasn't able to wget that binary inside of my ESXi machine so I downloaded it on my virtual migrate machine instead and sent it via SCP to the ESXi host.
+
+Passing the rsync path to the host enabled me to send huge files :) ETA for a 2TB vmdk on my home network is around 3.5 hours.
+
+rsync --rsync-path=/tmp/rsync/rsync-static -avP PATH-TO-VMDK-FOLDER-ON-MIGRATE-MACHINE USER@ESXI-HOST-IP:/vmfs/volumes/RANDOM-NUMBER-FOR-MY-DATA-STORE
+
+That's it!

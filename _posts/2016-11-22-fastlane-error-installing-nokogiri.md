@@ -2,7 +2,7 @@
 layout:     post
 title:      "Error installing nokogiri - Fastlane"
 subtitle:   "Solution? 3 easy steps"
-date:       2016-11-22 06:20:00
+date:       2016-09-22 06:20:00
 author:     "Billy"
 header-img: ""
 ---

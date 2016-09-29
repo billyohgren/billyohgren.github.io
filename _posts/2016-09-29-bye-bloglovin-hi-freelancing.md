@@ -4,7 +4,7 @@ title:      "Bye Bloglovin, Hi freelancing!"
 subtitle:   "It's time for something new"
 date:       2016-09-29 06:50:00
 author:     "Billy"
-header-img: ""
+header-img: "img/bye-bloglovin-bg.jpg"
 ---
 It's been about 4 years since I first met with the founders of Bloglovin and later on decided to join the company as their first iOS developer.
 
